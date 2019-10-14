@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r requirements_dev.txt
     - name: Lint with flake8
       run: |
         pip install flake8
@@ -31,4 +31,4 @@ jobs:
     - name: Run safety on safety
       run: |
         pip install safety
-        safety check --json -r requerements.txt
+        safety check --json -r requirements_dev.txt

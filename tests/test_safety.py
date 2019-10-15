@@ -127,7 +127,7 @@ class TestSafety(unittest.TestCase):
             input_vulns = read_vulnerabilities(insecure)
 
         vulns = safety.review(input_vulns)
-        assert(len(vulns), 3)
+        assertEqual(len(vulns), 3)
 
     def test_check_from_file(self):
         reqs = StringIO("Django==1.8.1")
